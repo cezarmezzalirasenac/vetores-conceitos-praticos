@@ -27,6 +27,12 @@ public class Exemplo02 {
     System.out.println(Arrays.toString(salarios));
     System.out.println(Arrays.toString(impostos));
 
+    for (int i = 0; i < salarios.length; i++) {
+      System.out.printf("Salário: R$ %.2f -> Imposto R$ %.2f\n",
+          salarios[i],
+          impostos[i]);
+    }
+
     scanner.close();
   }
 }
