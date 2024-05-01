@@ -19,8 +19,6 @@ public class Exemplo02 {
     for (int contador = 0; contador < salarios.length; contador++) {
       System.out.printf("Informe o salário do mês %d: ", contador + 1);
       salarios[contador] = scanner.nextDouble();
-      // armazenar na mesma posição do mês do salário o valor de IRPF
-      impostos[contador] = (salarios[contador] * percentualImposto) / 100;
     }
 
     // mostrar os valores das listas
@@ -28,6 +26,8 @@ public class Exemplo02 {
     System.out.println(Arrays.toString(impostos));
 
     for (int i = 0; i < salarios.length; i++) {
+      // armazenar na mesma posição do mês do salário o valor de IRPF
+      impostos[i] = (salarios[i] * percentualImposto) / 100;
       System.out.printf("Salário: R$ %.2f -> Imposto R$ %.2f\n",
           salarios[i],
           impostos[i]);
